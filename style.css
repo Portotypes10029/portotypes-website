@@ -433,3 +433,27 @@ img.displaySlide {
 .next {
     right: 0;
 }
+
+.card {
+      background: #fff;
+      width: 300px; /* fixed size */
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      text-align: center;
+}
+.card h2 {
+  margin: 0 0 10px;
+  font-size: 1.5em;
+}
+.card p {
+  margin: 6px 0;
+  color: #555;
+}
+.card a {
+  color: #0077cc;
+  text-decoration: none;
+}
+.card a:hover {
+  text-decoration: underline;
+}
