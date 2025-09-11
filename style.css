@@ -31,18 +31,18 @@ header {
   margin: auto;
 }
 
-.header-content img {
+.header-content img { 
   height: 70px;
   border-radius: 8px;
 }
 
 .header-text h1 {
   margin: 0;
-  font-size: 2.2rem;
+  font-size: clamp(1.2rem, 4vw, 2.2rem); /* screen scaling */
   font-weight: 700;
   color: var(--white);
+  white-space: nowrap;  
 }
-
 .header-text p {
   margin: 4px 0 0;
   font-size: 1rem;
@@ -71,7 +71,7 @@ h2 {
   position: relative;
   overflow: hidden;
   width: 100%;
-  max-width: 700px; /* optional, keeps things neat */
+  max-width: 700px; 
   margin: auto;
 }
 
@@ -141,13 +141,17 @@ h2 {
 }
 
 @media (max-width: 600px) {
+  .sponsors-grid {
+    gap: 10px; /* tighten spacing for small baby screens */
+  }
+
   .sponsor-card {
     flex: 1 0 45%;
     max-width: 45%;
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 350px) {
   .sponsor-card {
     flex: 1 0 100%;
     max-width: 100%;
@@ -219,12 +223,10 @@ footer {
   display: block;
 }
 
-/* Smooth scroll */
 html {
   scroll-behavior: smooth;
 }
 
-/* Nav container */
 .nav {
   display: flex;
   align-items: center;
@@ -261,7 +263,6 @@ html {
   background-color: #ff4c4c;
 }
 
-/* Responsive nav (mobile) */
 @media (max-width: 768px) {
   .nav-buttons {
     display: none;
@@ -392,7 +393,6 @@ html {
   }
 }
 
-
 .slider {
     position: relative;
     width: 100%;
@@ -410,8 +410,6 @@ img.displaySlide {
     animation-name: fade;
     animation-duration: 1.5s;
 }
-
-
 
 .slider button {
     position: absolute;
@@ -434,13 +432,24 @@ img.displaySlide {
     right: 0;
 }
 
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  justify-items: center; /* center cards inside their grid cells */
+  margin: 0 auto;
+  max-width: 1000px; /* optional: limit how wide the grid gets */
+  padding: 20px;
+}
+
 .card {
-      background: #fff;
-      width: 300px; /* fixed size */
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      text-align: center;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  width: 100%;
+  max-width: 320px; 
 }
 
 .card h2 {
