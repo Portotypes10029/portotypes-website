@@ -2,6 +2,11 @@
   --red: #e63946;
   --white: #ffffff;
   --black: #0b0b0b;
+  --tba: #4355A5; /* The Blue Alliance blue */
+  --first-blue: #0065b3; /* FIRST official blue */
+  --first-red: #ed1c24; /* FIRST official red */
+  --first-gray: #99999a; /* FIRST official gray */
+  --first-gray-dark: #231f20; /* FIRST official dark gray */
 }
 
 * {
@@ -466,4 +471,156 @@ img.displaySlide {
 }
 .card a:hover {
   text-decoration: underline;
+}
+
+
+
+
+/* Calendar */
+
+
+#container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+#calendar {
+  max-width: 600px;
+}
+
+#calendar-header {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  font-weight: bold;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+#calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+}
+
+.day {
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: center;
+  cursor: pointer;
+}
+
+.day.event {
+  position: relative;
+  background-color: var(--first-blue); /* soft cream highlight */
+  border: 1px solid var(--first-gray); /* subtle golden border */
+  font-weight: 300;
+  color: white;
+}
+
+.day.event::after {
+  content: "";
+  position: absolute;
+  bottom: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 6px;
+  height: 6px;
+  background-color: var(--first-red); 
+  border-radius: 50%;
+}
+
+.day.event:hover {
+  background-color: var(--tba);
+  cursor: pointer;
+}
+
+.day.today {
+  border: 2px solid #000;
+}
+
+#sidebar {
+  width: 280px;
+  text-align: left;
+  border-left: 2px solid #ccc;
+  padding-left: 15px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 15px;
+}
+
+#sidebar-date {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+#events {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#events li {
+  background-color: #fff;
+  border-left: 4px solid var(--first-red);
+  padding: 8px 10px;
+  margin-bottom: 8px;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  transition: transform 0.1s ease;
+}
+
+#events li:hover {
+  transform: translateX(2px);
+}
+
+.placeholder {
+  color: #888;
+  font-style: italic;
+  background: none;
+  border: none;
+  box-shadow: none;
+  padding-left: 0;
+}
+
+
+/* Mobile responsive layout */
+@media (max-width: 600px) {
+  #container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #calendar {
+    max-width: 100%;
+  }
+
+  #sidebar {
+    width: 90%;
+    margin-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  #calendar-grid {
+    grid-template-columns: repeat(7, 1fr);
+    gap: 3px;
+  }
+
+  .day {
+    padding: 8px;
+    font-size: 0.9rem;
+  }
+
+  #sidebar-date {
+    font-size: 1.1rem;
+  }
+
+  #events li {
+    padding: 6px 8px;
+  }
 }
