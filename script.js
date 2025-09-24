@@ -119,7 +119,7 @@ let events = [];
 let currentDate = new Date();
 
 // Load events from JSON
-fetch("events.json")
+fetch("/events.json")
   .then(res => res.json())
   .then(data => {
     events = data;
