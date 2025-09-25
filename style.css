@@ -21,8 +21,8 @@
   --tba: #4355A5;       /* lighter blue for contrast */
   --first-blue: #0065b3;
   --first-red: #ed1c24;
-  --first-gray: #cccccc;
-  --first-gray-dark: #f5f5f5;
+  --first-gray: #99999a;
+  --first-gray-dark: #231f20;
   --day: #0b0b0b;
 }
 
@@ -690,10 +690,11 @@ img.displaySlide {
   list-style: none;
   padding: 0;
   margin: 0;
+  color: var(--first-gray-dark);
 }
 
 #events li {
-  background-color: #fff;
+  background-color: var(--white);
   border-left: 4px solid var(--first-red);
   padding: 8px 10px;
   margin-bottom: 8px;
@@ -707,7 +708,7 @@ img.displaySlide {
 }
 
 .placeholder {
-  color: #888;
+  color: var(--first-gray-dark);
   font-style: italic;
   background: none;
   border: none;
