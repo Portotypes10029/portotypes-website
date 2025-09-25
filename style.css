@@ -7,6 +7,34 @@
   --first-red: #ed1c24; /* FIRST official red */
   --first-gray: #99999a; /* FIRST official gray */
   --first-gray-dark: #231f20; /* FIRST official dark gray */
+  --day: #0b0b0b;
+}
+
+
+
+
+/* Dark Mode Overrides */
+.dark-mode {
+  --red: #e63946;
+  --white: #eaeaea;
+  --black: #f1f1f1;
+  --tba: #4355A5;       /* lighter blue for contrast */
+  --first-blue: #0065b3;
+  --first-red: #ed1c24;
+  --first-gray: #cccccc;
+  --first-gray-dark: #f5f5f5;
+  --day: #0b0b0b;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: var(--white);
+}
+
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode p {
+  color: var(--white);
 }
 
 * {
@@ -20,12 +48,15 @@ body {
   background-color: #f8f9fa;
 }
 
+
 /* Header */
 header {
   background: linear-gradient(to right, #000000, #1a1a1a);
   color: var(--white);
   padding: 20px 40px;
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+  border-bottom: 4px solid var(--first-blue);
+
 }
 
 .header-content {
@@ -70,6 +101,18 @@ h2 {
   color: var(--black);
 }
 
+
+.handbook-link {
+  position: relative;
+  color: var(--black);
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+}
+.handbook-link:hover {
+  text-decoration: underline;
+}
+
 .highlights-header {
   display: flex;
   align-items: baseline;  /* aligns the bottom of h2 and link nicely */
@@ -81,13 +124,14 @@ h2 {
 }
 
 .highlights-header .full-gallery {
-  font-size: 0.9rem;
+  font-size: 0.7rem;
   position: relative;
-  top: -4px;
+  top: -6px;
   color: var(--black);
-  text-decoration: none;
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
 }
-
 
 .highlights-header .full-gallery:hover {
   text-decoration: underline;
@@ -163,7 +207,7 @@ h2 {
 .sponsor-card img {
   max-width: 100%;
   max-height: 100px;
-  object-fit: contain;
+  object-fit: cover;
   margin-bottom: 10px;
 }
 
@@ -188,7 +232,7 @@ h2 {
 .sponsor-card h3 {
   margin: 0 0 6px;
   font-size: 1rem;
-  color: #222;
+  color: #333 !important;
 }
 
 .sponsor-card p {
@@ -199,31 +243,53 @@ h2 {
 }
 
 
+
+
 /* Footer */
 footer {
   background: linear-gradient(to right, #111111, #000000);
   color: white;
   padding: 30px 20px;
-  border-top: 4px solid var(--red);
+  border-top: 4px solid var(--first-red);
   text-align: center;
 }
 
 .footer-content {
-  max-width: 1000px;
-  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .footer-content p {
-  margin: 0 0 10px;
-  font-size: 0.95rem;
-  color: #bbb;
+  flex: 1 0 100%;
+  text-align: center;
+  margin-bottom: 10px;
 }
 
 .social-icons {
   display: flex;
-  justify-content: center;
+  justify-content: center; 
   gap: 16px;
-  margin-top: 8px;
+  flex: 1;
+  padding-left: 30px;
+
+}
+
+.dark-toggle {
+  background: var(--red);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s;
+  margin-left: auto;
+}
+.dark-toggle:hover {
+  background: #ff4c4c;
 }
 
 .social-icons a {
@@ -369,6 +435,12 @@ html {
   background-color: #4355A5 !important;
 }
 
+.white-icon {
+  background-color: #fff !important; 
+}
+.white-icon:hover {
+  background-color: #dddddd !important;
+}
 
 
 .gallery-grid {
@@ -463,9 +535,9 @@ img.displaySlide {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
-  justify-items: center; /* center cards inside their grid cells */
+  justify-items: center; 
   margin: 0 auto;
-  max-width: 1000px; /* optional: limit how wide the grid gets */
+  max-width: 1000px; 
   padding: 20px;
 }
 
@@ -482,10 +554,11 @@ img.displaySlide {
 .card h2 {
   margin: 0 0 10px;
   font-size: 1.5em;
+  color: #0b0b0b !important;
 }
 .card p {
   margin: 6px 0;
-  color: #555;
+  color: #555 !important;
 }
 .card a {
   color: #0077cc;
@@ -499,8 +572,6 @@ img.displaySlide {
 
 
 /* Calendar */
-
-
 #container {
   display: flex;
   justify-content: center;
@@ -557,6 +628,7 @@ img.displaySlide {
   text-align: center;
   font-weight: 300;
   transition: background-color 0.15s ease, transform 0.15s ease;
+  color: var(--day);
 }
 
 .day:hover {
