@@ -70,6 +70,28 @@ h2 {
   color: var(--black);
 }
 
+.highlights-header {
+  display: flex;
+  align-items: baseline;  /* aligns the bottom of h2 and link nicely */
+  gap: 8px;               /* space between them */
+}
+
+.highlights-header h2 {
+  margin: 0;
+}
+
+.highlights-header .full-gallery {
+  font-size: 0.9rem;
+  position: relative;
+  top: -4px;
+  color: var(--black);
+  text-decoration: none;
+}
+
+
+.highlights-header .full-gallery:hover {
+  text-decoration: underline;
+}
 
 /* Carousel */
 .carousel {
@@ -268,7 +290,7 @@ html {
   background-color: #ff4c4c;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
   .nav-buttons {
     display: none;
     flex-direction: column;
@@ -571,6 +593,7 @@ img.displaySlide {
   border: 2px solid var(--first-gray-dark);
   font-weight: 600;
   background: var(--tba);
+  color: white;
 }
 
 #sidebar {
@@ -647,6 +670,7 @@ img.displaySlide {
   .day {
     padding: 8px;
     font-size: 0.9rem;
+
   }
 
   #sidebar-date {
