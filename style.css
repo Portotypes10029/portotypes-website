@@ -49,12 +49,15 @@ body {
 }
 
 
+
 /* Header */
 header {
   background: linear-gradient(to right, #000000, #1a1a1a);
   color: var(--white);
   padding: 20px 40px;
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+  border-bottom: 4px solid var(--first-blue);
+
   border-bottom: 4px solid var(--first-blue);
 
 }
@@ -113,6 +116,18 @@ h2 {
   text-decoration: underline;
 }
 
+
+.handbook-link {
+  position: relative;
+  color: var(--black);
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+}
+.handbook-link:hover {
+  text-decoration: underline;
+}
+
 .highlights-header {
   display: flex;
   align-items: baseline;  /* aligns the bottom of h2 and link nicely */
@@ -125,9 +140,14 @@ h2 {
 
 .highlights-header .full-gallery {
   font-size: 0.7rem;
+  font-size: 0.7rem;
   position: relative;
   top: -6px;
+  top: -6px;
   color: var(--black);
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
   font-weight: bold;
   text-decoration: underline;
   text-decoration-thickness: 2px;
@@ -208,6 +228,7 @@ h2 {
   max-width: 100%;
   max-height: 100px;
   object-fit: cover;
+  object-fit: cover;
   margin-bottom: 10px;
 }
 
@@ -233,6 +254,7 @@ h2 {
   margin: 0 0 6px;
   font-size: 1rem;
   color: #333 !important;
+  color: #333 !important;
 }
 
 .sponsor-card p {
@@ -245,16 +267,23 @@ h2 {
 
 
 
+
+
 /* Footer */
 footer {
   background: linear-gradient(to right, #111111, #000000);
   color: white;
   padding: 30px 20px;
   border-top: 4px solid var(--first-red);
+  border-top: 4px solid var(--first-red);
   text-align: center;
 }
 
 .footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -265,12 +294,35 @@ footer {
   flex: 1 0 100%;
   text-align: center;
   margin-bottom: 10px;
+  flex: 1 0 100%;
+  text-align: center;
+  margin-bottom: 10px;
 }
 
 .social-icons {
   display: flex;
   justify-content: center; 
+  justify-content: center; 
   gap: 16px;
+  flex: 1;
+  padding-left: 30px;
+
+}
+
+.dark-toggle {
+  background: var(--red);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s;
+  margin-left: auto;
+}
+.dark-toggle:hover {
+  background: #ff4c4c;
   flex: 1;
   padding-left: 30px;
 
@@ -441,6 +493,12 @@ html {
 .white-icon:hover {
   background-color: #dddddd !important;
 }
+.white-icon {
+  background-color: #fff !important; 
+}
+.white-icon:hover {
+  background-color: #dddddd !important;
+}
 
 
 .gallery-grid {
@@ -536,7 +594,9 @@ img.displaySlide {
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
   justify-items: center; 
+  justify-items: center; 
   margin: 0 auto;
+  max-width: 1000px; 
   max-width: 1000px; 
   padding: 20px;
 }
@@ -555,9 +615,11 @@ img.displaySlide {
   margin: 0 0 10px;
   font-size: 1.5em;
   color: #0b0b0b !important;
+  color: #0b0b0b !important;
 }
 .card p {
   margin: 6px 0;
+  color: #555 !important;
   color: #555 !important;
 }
 .card a {
@@ -628,6 +690,7 @@ img.displaySlide {
   text-align: center;
   font-weight: 300;
   transition: background-color 0.15s ease, transform 0.15s ease;
+  color: var(--day);
   color: var(--day);
 }
 
