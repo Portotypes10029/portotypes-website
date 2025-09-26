@@ -97,7 +97,13 @@ document.addEventListener("DOMContentLoaded", () => {
         function initializeSlider() {
             if (slides.length > 0) {
                 slides[slideIndex].classList.add("displaySlide");
-                intervalId = setInterval(nextSlide, 5000); // autoplay every 5s
+                  if (slider.hasAttribute("slow-autoplay")) {
+                      intervalId = setInterval(nextSlide, 10000); // autoplay every 10s
+                  } else if (slider.hasAttribute("no-data-autoplay")) {
+                      // Do not autoplay
+                  } else {
+                      intervalId = setInterval(nextSlide, 5000); // autoplay every 5s
+                  }
             }
         }
 
