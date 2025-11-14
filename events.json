@@ -4,15 +4,26 @@
   { "date": "2025-09-20", "title": "Build 12-3" },
   { "date": "2025-09-24", "title": "Meet@Homeroom" },
   { "date": "2025-09-27", "title": "Build 12-3" },
+
   { "date": "2025-10-04", "title": "Build 12-3" },
   { "date": "2025-10-08", "title": "Meet@Homeroom" },
   { "date": "2025-10-11", "title": "Build 12-3" },
   { "date": "2025-10-18", "title": "Build 12-3" },
   { "date": "2025-10-22", "title": "Meet@Homeroom" },
+
   { "date": "2025-11-05", "title": "Meet@Homeroom" },
-  { "date": "2025-11-05", "title": "Team Lead Voting" },
-  { "date": "2025-11-19", "title": "Meet@Homeroom" },
-  { "date": "2025-12-10", "title": "Meet@Homeroom" },
+  { "date": "2025-11-05", "title": "Build 3-5" },
+  { "date": "2025-11-19", "title": "Build 3-5" },
+  { "date": "2025-11-19", "title": "Elections 4-5" },
+  { "date": "2025-11-19", "title": "Parent Meeting 5pm" },
+
+  { "date": "2025-12-03", "title": "Build 3-5" },
+  { "date": "2025-12-04", "title": "Cappo's Give-Back Night" },
+  { "date": "2025-12-09", "title": "Panera Give-Back Night (4-8 PM)" },
+  { "date": "2025-12-10", "title": "Build 3-5" },
+  { "date": "2025-12-21", "title": "Chipotle Give-Back Night (4-8 PM)" },
+
+
   { "date": "2026-01-01", "title": "New Year's Day" },
   { "date": "2026-01-10", "title": "Kickoff" },
   { "date": "2026-01-10", "title": "Build 9-3" },
@@ -31,6 +42,7 @@
   { "date": "2026-01-28", "title": "Build 3-6" },
   { "date": "2026-01-29", "title": "Build 3-6" },
   { "date": "2026-01-31", "title": "Build 9-3" },
+
   { "date": "2026-02-02", "title": "Build 3-6" },
   { "date": "2026-02-03", "title": "Build 3-6" },
   { "date": "2026-02-04", "title": "Build 3-6" },
@@ -51,6 +63,7 @@
   { "date": "2026-02-25", "title": "Build 3-6" },
   { "date": "2026-02-26", "title": "Build 3-6" },
   { "date": "2026-02-28", "title": "Build 9-3" },
+  
   { "date": "2026-03-02", "title": "Build TBA" },
   { "date": "2026-03-03", "title": "Build TBA" },
   { "date": "2026-03-04", "title": "Build TBA" },

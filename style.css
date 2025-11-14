@@ -829,3 +829,75 @@ img.displaySlide {
   outline: none;
   box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.4);
 }
+
+
+
+
+/* Fundraisers Layout */
+.fundraiser-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  margin-top: 20px;
+}
+
+.fundraiser-card {
+  background: var(--white);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  width: 100%;
+  max-width: 320px;
+  transition: transform 0.15s ease;
+}
+
+.fundraiser-card:hover {
+  transform: translateY(-3px);
+}
+
+/* Logos */
+.fundraiser-logo {
+  width: 140px;
+  max-height: 110px;
+  object-fit: contain;
+  margin-bottom: 12px;
+}
+
+/* Headings & Text Colors */
+.fundraiser-card h3 {
+  color: var(--black);
+  margin: 10px 0;
+}
+
+.fundraiser-card p {
+  color: var(--first-gray-dark);
+  margin: 6px 0;
+  font-size: 95%;
+}
+
+body.dark-mode .fundraiser-card {
+  box-shadow: 0 2px 10px rgba(255,255,255,0.08);
+}
+
+body.dark-mode .fundraiser-card h3 {
+  color: var(--white) !important;
+}
+
+body.dark-mode .fundraiser-card p {
+  color: var(--first-gray-dark) !important;
+}
+
+/* Poster Link */
+.poster-link {
+  display: inline-block;
+  margin-top: 8px;
+  font-weight: bold;
+  color: var(--first-blue);
+  text-decoration: underline;
+}
+
+.poster-link:hover {
+  text-decoration-thickness: 2px;
+}
