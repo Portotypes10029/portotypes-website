@@ -901,3 +901,10 @@ body.dark-mode .fundraiser-card p {
 .poster-link:hover {
   text-decoration-thickness: 2px;
 }
+
+code {
+  background-color: #f4f4f4;
+  padding: 2px 4px;
+  border-radius: 4px;
+  font-family: 'Courier New', Courier, monospace;
+}
