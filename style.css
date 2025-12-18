@@ -878,7 +878,6 @@ body.dark-mode .fundraiser-card {
 }
 
 
-
 body.dark-mode .fundraiser-card p {
   color: var(--first-gray-dark) !important;
 }
@@ -921,7 +920,7 @@ code {
 .ticker-content {
   display: inline-block;
   padding-left: 100%; /* Start off-screen */
-  animation: ticker-scroll 20s linear infinite;
+  animation: ticker-scroll 30s linear infinite;
 }
 
 .ticker-content span {
