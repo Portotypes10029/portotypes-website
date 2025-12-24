@@ -274,22 +274,57 @@ toggleBtn.addEventListener("click", () => {
 document.addEventListener("DOMContentLoaded", () => {
   const mascot = document.getElementById("mascot");
   const bubble = document.getElementById("speechBubble");
+  if (!sessionStorage.getItem("tomSeen")) {
+    bubble.textContent = "Psst… click me!";
+    bubble.style.display = "block";
 
-  const messages = [
-    "Go Portotypes! ",
-    "Team 10029 💪",
-    "See you at Mishawaka!",
+    setTimeout(() => {
+      bubble.style.display = "none";
+    }, 5000);
+    sessionStorage.setItem("tomSeen", "true");
+  }
+  
+  const messagesDefault = [
+    "Go Portotypes! 🦅",
     "STEM starts here 🤖",
-    "Build. Code. Compete."
+    "Build. Code. Compete.",
+    "Team 10029 💪",
+    "See you at Mishawaka! 🏆",
   ];
 
+  const messagesMishawaka = [
+    "See you at Mishawaka! 🏆",
+    "Team 10029 💪",
+    "Go Portotypes! 🦅",
+    "Let’s crush the district competition!",
+    "Team 10029 is ready!"
+  ];
+
+  const messagesWashington = [
+    "Washington District, here we come!",
+    "Bring the trophy home!",
+    "Keep building, team!"
+  ];
+
+  const today = new Date();
+
+  let messages;
+
+  if (today >= new Date("2026-03-06") && today <= new Date("2026-03-08")) {
+    messages = messagesMishawaka;
+  } else if (today >= new Date("2026-04-02") && today <= new Date("2026-04-04")) {
+    messages = messagesWashington;
+  } else {
+    messages = messagesDefault;
+  }
+
   mascot.addEventListener("click", () => {
-    bubble.textContent =
-      messages[Math.floor(Math.random() * messages.length)];
+    bubble.textContent = messages[Math.floor(Math.random() * messages.length)];
     bubble.style.display = "block";
     clearTimeout(window.bubbleTimeout);
     window.bubbleTimeout = setTimeout(() => {
       bubble.style.display = "none";
     }, 3000);
   });
+
 });

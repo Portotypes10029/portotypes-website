@@ -315,8 +315,10 @@ footer {
   cursor: pointer;
   font-size: 1rem;
   transition: background 0.3s;
-  margin-left: auto;
+  margin-left: 0;
+  margin-right: 16px;
 }
+
 .dark-toggle:hover {
   background: #ff4c4c;
 }
@@ -470,11 +472,8 @@ html {
 .white-icon:hover {
   background-color: #dddddd !important;
 }
-.white-icon {
-  background-color: #fff !important; 
-}
-.white-icon:hover {
-  background-color: #dddddd !important;
+.black-icon {
+  background-color: #111111 !important; 
 }
 
 
@@ -905,30 +904,30 @@ code {
 
 .news-ticker {
   width: 100%;
-  background: #c8102e; /* Portage Red or adjust to your theme */
+  background: #c8102e;
   color: white;
   overflow: hidden;
-  white-space: nowrap;
   box-shadow: 0 2px 6px rgba(0,0,0,0.2);
   padding: 10px 0;
-  position: relative;
+  border-radius: 12px;
   font-weight: bold;
   font-size: 1.1rem;
-  border-radius: 12px;
 }
 
 .ticker-content {
-  display: inline-block;
-  padding-left: 100%; /* Start off-screen */
-  animation: ticker-scroll 30s linear infinite;
+  display: flex;
+  width: max-content;
+  animation: ticker-scroll 14s linear infinite;
 }
 
-.ticker-content span {
-  margin-right: 60px;
+.ticker-group {
+  display: flex;
+  gap: 60px;       /* space between individual messages */
+  margin-right: 70px; /* extra space between the duplicated groups */
 }
 
 .news-ticker:hover .ticker-content {
-  animation-play-state: paused; /* Pauses on hover */
+  animation-play-state: paused;
 }
 
 @keyframes ticker-scroll {
@@ -936,7 +935,7 @@ code {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-50%);
   }
 }
 
