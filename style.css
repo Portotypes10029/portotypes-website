@@ -939,3 +939,46 @@ code {
     transform: translateX(-100%);
   }
 }
+
+
+.mascot-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.mascot-float img {
+  width: 140px;
+  cursor: pointer;
+}
+
+.speech-bubble {
+  position: absolute;
+  bottom: 100px;
+  right: 160px; /* push bubble LEFT of mascot */
+  background: white;
+  color: black;
+  padding: 10px 14px;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  max-width: 220px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  display: none;
+}
+
+.speech-bubble::after {
+  content: "";
+  position: absolute;
+  bottom: 12px;
+  right: -8px;
+  border-width: 8px 0 8px 8px;
+  border-style: solid;
+  border-color: transparent transparent transparent white;
+}
+
+@media (max-width: 768px) {
+  .mascot-float {
+    display: none;
+  }
+}

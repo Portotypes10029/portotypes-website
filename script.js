@@ -269,3 +269,27 @@ toggleBtn.addEventListener("click", () => {
     toggleBtn.textContent = "🌙";
   }
 });
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const mascot = document.getElementById("mascot");
+  const bubble = document.getElementById("speechBubble");
+
+  const messages = [
+    "Go Portotypes! ",
+    "Team 10029 💪",
+    "See you at Mishawaka!",
+    "STEM starts here 🤖",
+    "Build. Code. Compete."
+  ];
+
+  mascot.addEventListener("click", () => {
+    bubble.textContent =
+      messages[Math.floor(Math.random() * messages.length)];
+    bubble.style.display = "block";
+    clearTimeout(window.bubbleTimeout);
+    window.bubbleTimeout = setTimeout(() => {
+      bubble.style.display = "none";
+    }, 3000);
+  });
+});
