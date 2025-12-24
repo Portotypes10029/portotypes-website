@@ -948,15 +948,26 @@ code {
   z-index: 1000;
 }
 
-.mascot-float img {
-  width: 140px;
+/* Wrapper anchors bubble to mascot */
+.mascot-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+/* Mascot scales correctly */
+.mascot-wrapper img {
+  width: min(140px, 18vw);
+  height: auto;
   cursor: pointer;
 }
 
+/* Speech bubble positioned RELATIVE to mascot */
 .speech-bubble {
   position: absolute;
-  bottom: 100px;
-  right: 160px; /* push bubble LEFT of mascot */
+  top: 20%;
+  right: 100%;
+  margin-right: 12px;
+
   background: white;
   color: black;
   padding: 10px 14px;
@@ -964,19 +975,24 @@ code {
   font-size: 0.9rem;
   max-width: 220px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+
   display: none;
+  white-space: normal;
 }
 
+/* Bubble tail points RIGHT toward mascot */
 .speech-bubble::after {
   content: "";
   position: absolute;
-  bottom: 12px;
+  top: 18px;
   right: -8px;
+
   border-width: 8px 0 8px 8px;
   border-style: solid;
   border-color: transparent transparent transparent white;
 }
 
+/* Hide on mobile */
 @media (max-width: 768px) {
   .mascot-float {
     display: none;
