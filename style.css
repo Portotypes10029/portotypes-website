@@ -305,21 +305,21 @@ footer {
 .dark-toggle {
   position: absolute;
   left: 20px;
-  display: flex;                /* 🔑 fix */
-  align-items: center;          /* vertical centering */
+  display: flex;                
+  align-items: center;          
   justify-content: center;
   width: 36px;
   height: 36px;
-  line-height: 1;               /* remove text baseline shift */
-  padding: 0;                   /* prevent internal offset */
+  line-height: 1;               
+  padding: 0;                   
   background: var(--red);
   color: white;
   border: none;
   border-radius: 50%;
   font-size: 18px;
   cursor: pointer;
-  z-index: 10;                  /* 🔑 THIS fixes the click issue */
-  transform: translateY(38px); /* 🔑 optical alignment */
+  z-index: 10;                  
+  transform: translateY(38px); 
 }
 
 .dark-toggle:hover {
