@@ -116,18 +116,6 @@ h2 {
   text-decoration: underline;
 }
 
-
-.handbook-link {
-  position: relative;
-  color: var(--black);
-  font-weight: bold;
-  text-decoration: underline;
-  text-decoration-thickness: 2px;
-}
-.handbook-link:hover {
-  text-decoration: underline;
-}
-
 .highlights-header {
   display: flex;
   align-items: baseline;  /* aligns the bottom of h2 and link nicely */
@@ -1004,4 +992,15 @@ code {
   .mascot-float {
     display: none;
   }
+}
+
+.packet-link {
+  position: relative;
+  color: var(--black);
+  font-weight: bold;
+  font-size: large;
+  text-decoration-thickness: 2px;
+}
+.packet-link:hover {
+  text-decoration: underline;
 }
