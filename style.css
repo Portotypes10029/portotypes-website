@@ -12,6 +12,10 @@
 
 
 
+.sponsors_title {
+  display: flex;
+  text-align: center;
+}
 
 /* Dark Mode Overrides */
 .dark-mode {
