@@ -289,7 +289,6 @@ document.addEventListener("DOMContentLoaded", () => {
     "STEM starts here 🤖",
     "Build. Code. Compete.",
     "Team 10029 💪",
-    "See you at Mishawaka! 🏆",
   ];
 
   const messagesMishawaka = [
